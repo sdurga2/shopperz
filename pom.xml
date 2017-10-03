@@ -189,7 +189,8 @@
  </plugins>
 </build>
 
-
+<!-- Adding Nexus snapshots and release repos -->
+	
   <distributionManagement>
     <snapshotRepository>
       <id>maven-snapshots</id>
