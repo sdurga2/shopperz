@@ -159,6 +159,7 @@
             <name>JBoss Maven Release Repository</name>
             <url>https://repository.jboss.org/nexus/content/repositories/releases</url>
         </repository>
+
     </repositories>
 
     <pluginRepositories>
@@ -176,4 +177,29 @@
 
 	</dependencyManagement>
 
+<build>
+ <plugins>
+      <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-deploy-plugin</artifactId>
+    <configuration>
+        <skip>true</skip>
+    </configuration>
+  </plugin>
+ </plugins>
+</build>
+
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>maven-snapshots</id>
+      <url>http://63.142.254.210:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>maven-releases</id>
+      <url>http://63.142.254.210:8081/repository/maven-releases/</url>
+    </repository>
+  </distributionManagement>
+
 </project>
+
